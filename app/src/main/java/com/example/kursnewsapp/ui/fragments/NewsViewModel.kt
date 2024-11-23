@@ -73,6 +73,8 @@ class NewsViewModel(
 
     fun toggleFavorite(article: Article) = viewModelScope.launch {
         val isFavorite = newsRepository.isArticleFavorite(article.key ?: -1)
+        System.out.println(article)
+        System.out.println(isFavorite)
         if (isFavorite) {
             newsRepository.deleteArticle(article)
             _snackbarMessage.postValue("Removed from favorites")

@@ -1,6 +1,7 @@
 package com.example.kursnewsapp.db
 
 import android.content.Context
+import androidx.room.AutoMigration
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -10,7 +11,7 @@ import com.example.kursnewsapp.models.Article
 import java.time.chrono.HijrahChronology.INSTANCE
 
 
-@Database(entities = [Article::class], version=1)
+@Database(entities = [Article::class], version=2)
 @TypeConverters(Converters::class)
  abstract class DataBaseArticle:RoomDatabase() {
 
@@ -27,7 +28,8 @@ import java.time.chrono.HijrahChronology.INSTANCE
                      context.applicationContext,
                      DataBaseArticle::class.java,
                      "tasks"
-                 ).build()
+                 )
+                     .build()
                  INSTANCE = instance
                  instance
              }

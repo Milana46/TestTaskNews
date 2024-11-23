@@ -20,7 +20,7 @@ interface ArticleDao {
      fun getAllArticle(): LiveData<List<Article>>
 
    @Query("SELECT COUNT(*) > 0 FROM article WHERE [key] = :articleId")
-   suspend fun isArticleFavorite(articleId: Int?): Boolean
+   suspend fun isArticleFavorite(articleId: Int): Boolean
 
     @Delete
     suspend fun deleteArticle(article:Article)
