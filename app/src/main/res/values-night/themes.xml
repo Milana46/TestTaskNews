@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.KursNewsApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:colorBackground">@color/your_background_dark</item>
+        <item name="colorOnBackground">@color/your_on_background_dark</item>
+        <item name="colorSurface">@color/your_surface_dark</item>
+        <item name="colorOnSurface">@color/your_on_surface_dark</item>
+
+        <item name="android:textColorPrimary">@color/your_on_background_dark</item>
+        <item name="android:textColorSecondary">@color/your_on_background_dark</item>
+        <item name="android:textColor">@color/your_on_background_dark</item>
+    </style>
+</resources>
